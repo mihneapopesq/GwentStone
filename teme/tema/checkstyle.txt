@@ -1,2 +1,9 @@
 Starting audit...
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:4:8: Unused import - com.fasterxml.jackson.databind.ObjectMapper. [UnusedImports]
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:5:8: Unused import - com.fasterxml.jackson.databind.node.ObjectNode. [UnusedImports]
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:17:5: Missing a Javadoc comment. [MissingJavadocMethod]
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:17:12: Redundant 'final' modifier. [RedundantModifier]
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:17:27: Parameter output should be final. [FinalParameters]
+[ERROR] /home/mihnea/OOP_teme/tema1/Tema0_OOP/teme/tema/./src/main/Start.java:17:44: '{' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
+Checkstyle ends with 6 errors.

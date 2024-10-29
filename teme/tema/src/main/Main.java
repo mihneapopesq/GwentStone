@@ -69,6 +69,11 @@ public final class Main {
 
         ArrayNode output = objectMapper.createArrayNode();
 
+        // implemented the start of the game
+        Start gameplay = new Start(inputData, output);
+        gameplay.run(output);
+        // ends here
+
         /*
          * TODO Implement your function here
          *
