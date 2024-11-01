@@ -16,10 +16,14 @@ public final class Start {
     private Player [] players = new Player[2];
     private ObjectMapper objectMapper = new ObjectMapper();
     private ArrayList<GameInput> games;
-
+    private Input input;
+    private ArrayNode output;
     public Start(final Input input, ArrayNode output) {
         this.players[0] = new Player();
         this.players[1] = new Player();
+        this.objectMapper = new ObjectMapper();
+        this.input = input;
+        this.output = output;
     }
 
     public final void run(ArrayNode output){

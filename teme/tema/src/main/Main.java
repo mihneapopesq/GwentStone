@@ -2,11 +2,25 @@ package main;
 
 import checker.Checker;
 
+import java.util.Random;
+
+import com.fasterxml.jackson.core.util.DefaultIndenter;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 import checker.CheckerConstants;
 import fileio.Input;
+
+import fileio.GameInput;
+import fileio.StartGameInput;
+import fileio.ActionsInput;
+import fileio.CardInput;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,10 +83,69 @@ public final class Main {
 
         ArrayNode output = objectMapper.createArrayNode();
 
-        // implemented the start of the game
-        Start gameplay = new Start(inputData, output);
-        gameplay.run(output);
-        // ends here
+
+
+        Start start = new Start(inputData, output);
+        start.run(output);
+
+
+        // ce e de aici in jos trebuie transpus in Start si in commands
+
+        GameInput gameDetails = inputData.getGames().get(0);
+
+        StartGameInput startGame = gameDetails.getStartGame();
+        int playerOneDeckIdx = startGame.getPlayerOneDeckIdx();
+        int playerTwoDeckIdx = startGame.getPlayerTwoDeckIdx();
+        ObjectNode playerOneHero = objectMapper.valueToTree(startGame.getPlayerOneHero());
+        ObjectNode playerTwoHero = objectMapper.valueToTree(startGame.getPlayerTwoHero());
+        int startingPlayer = startGame.getStartingPlayer();
+
+
+
+        int shuffleSeed = startGame.getShuffleSeed();
+        Random random = new Random(shuffleSeed);
+
+        ArrayList<CardInput> playerOneDeck = new ArrayList<>(inputData.getPlayerOneDecks().getDecks().get(playerOneDeckIdx));
+        ArrayList<CardInput> playerTwoDeck = new ArrayList<>(inputData.getPlayerTwoDecks().getDecks().get(playerTwoDeckIdx));
+
+        Collections.shuffle(playerOneDeck, random);
+        Collections.shuffle(playerTwoDeck, random);
+
+
+        for (ActionsInput action : gameDetails.getActions()) {
+            String command = action.getCommand();
+            ObjectNode actionResult = objectMapper.createObjectNode();
+
+            if ("getPlayerDeck".equals(command)) {
+                int playerIdx = action.getPlayerIdx();
+                ArrayNode selectedDeck;
+                if (playerIdx == 1) {
+                    selectedDeck = objectMapper.valueToTree(inputData.getPlayerOneDecks().getDecks().get(playerOneDeckIdx));
+                } else {
+                    selectedDeck = objectMapper.valueToTree(inputData.getPlayerTwoDecks().getDecks().get(playerTwoDeckIdx));
+                }
+                actionResult.put("command", "getPlayerDeck");
+                actionResult.put("playerIdx", playerIdx);
+                actionResult.set("output", selectedDeck);
+
+            } else if ("getPlayerHero".equals(command)) {
+                int playerIdx = action.getPlayerIdx();
+                ObjectNode selectedHero;
+                if (playerIdx == 1) {
+                    selectedHero = playerOneHero;
+                } else {
+                    selectedHero = playerTwoHero;
+                }
+                actionResult.put("command", "getPlayerHero");
+                actionResult.put("playerIdx", playerIdx);
+                actionResult.set("output", selectedHero);
+
+            } else if ("getPlayerTurn".equals(command)) {
+                actionResult.put("command", "getPlayerTurn");
+                actionResult.put("output", startingPlayer);
+            }
+            output.add(actionResult);
+        }
 
         /*
          * TODO Implement your function here
@@ -93,7 +166,20 @@ public final class Main {
          *
          */
 
-        ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
+
+
+
+
+        DefaultPrettyPrinter prettyPrinter = new DefaultPrettyPrinter();
+        prettyPrinter.indentArraysWith(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
+        prettyPrinter.indentObjectsWith(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
+        prettyPrinter = prettyPrinter.withoutSpacesInObjectEntries();
+
+        ObjectWriter objectWriter = objectMapper.writer(prettyPrinter);
+//      ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
+
+
+
     }
 }
