@@ -86,9 +86,6 @@ public final class Main {
         Start startgame = new Start(inputData, output);
         startgame.run();
 
-//        System.out.printf("playeroneidx1 %d,", inputData.getGames().get(0).getStartGame().getPlayerOneDeckIdx());
-//        System.out.printf("playertwoidx1 %d \n,", inputData.getGames().get(0).getStartGame().getPlayerTwoDeckIdx());
-
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
     }

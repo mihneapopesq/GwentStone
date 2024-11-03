@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class Player {
 
+    CardInput hero;
     private ArrayList<CardInput> deck;
 
     public Player(){
@@ -19,6 +20,14 @@ public class Player {
 
     public ArrayList<CardInput> getDeck() {
         return deck;
+    }
+
+    public void setHero(CardInput hero){
+        this.hero = hero;
+    }
+
+    public CardInput getHero(){
+        return hero;
     }
 
 }
