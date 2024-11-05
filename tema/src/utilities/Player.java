@@ -8,7 +8,20 @@ import java.util.ArrayList;
 public class Player {
 
     CardInput hero;
+    Hand hand;
     private ArrayList<CardInput> deck;
+
+    public void addManaHero(int mana){
+        hero.setMana(hero.getMana() + mana);
+    }
+
+    public Hand getHand() {
+        return hand;
+    }
+
+    public void setHand(Hand hand) {
+        this.hand = hand;
+    }
 
     public Player(){
         this.deck = new ArrayList<>();

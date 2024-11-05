@@ -10,6 +10,10 @@ public class Card {
 
     private CardInput card;
 
+    public CardInput getCard() {
+        return card;
+    }
+
     public Card(CardInput card) {
         this.card = card;
     }

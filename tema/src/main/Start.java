@@ -7,18 +7,17 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.util.ArrayList;
 
 import java.util.Random;
-
+import utilities.Table;
 import java.util.Collections;
 
 import fileio.*;
-import utilities.Card;
-import utilities.Hero;
-import utilities.Player;
+import utilities.*;
 
 public final class Start {
 
     private int current_round = 0;
     private Player[] players = new Player[2];
+    private Table Table = new Table();
     private ObjectMapper objectMapper = new ObjectMapper();
     private ArrayList<GameInput> games;
     private Input input;
@@ -27,11 +26,17 @@ public final class Start {
     private ArrayList<CardInput> deckPlayer2;
     private ArrayList<ActionsInput> actionsinputs;
     private int playerTurn;
+    private int startingPlayer;
+    private int manaToIncrement = 1;
 
     //pare ok
     public Start(Input input, ArrayNode output) {
         players[0] = new Player();
         players[1] = new Player();
+        players[0].setHand(new Hand());
+        players[1].setHand(new Hand());
+        players[0].getHand().setCards(new ArrayList<Card>());
+        players[1].getHand().setCards(new ArrayList<Card>());
         this.input = input;
         this.output = output;
         deckPlayer1 = new ArrayList<CardInput>();
@@ -77,7 +82,7 @@ public final class Start {
         for (int i = 0; i < input.getGames().size(); i++) {
             initializeDecks(i);
             ObjectMapper mapper = new ObjectMapper();
-            int startingPlayer = input.getGames().get(i).getStartGame().getStartingPlayer();
+            startingPlayer = input.getGames().get(i).getStartGame().getStartingPlayer();
             actionsinputs = input.getGames().get(i).getActions();
             for (ActionsInput action : actionsinputs) {
                 ObjectNode actionNode = mapper.createObjectNode();
@@ -104,12 +109,36 @@ public final class Start {
         } else if (command.equals("getPlayerTurn")) {
             utilities.commands.getPlayerTurn getPlayerTurnInstance = new utilities.commands.getPlayerTurn(playerTurn);
             getPlayerTurnInstance.getPlayerTurn(action, actionNode, output);
-        } else if (command.equals("getCardsInHand")) {
-            // TODO: Implement getCardsInHand
-        } else if (command.equals("getPlayerMana")) {
-            // TODO: Implement getPlayerMana
-        } else if (command.equals("getCardsOnTable")) {
-            // TODO: Implement getCardsOnTable
+        } else if (command.equals("endPlayerTurn")) {
+            playerTurn = (playerTurn == 1) ? 2 : 1;
+            if(playerTurn == startingPlayer) {
+                current_round++;
+                manaToIncrement++;
+                player[0].addManaHero(player[0].getHero().getMana() + manaToIncrement);
+                player[1].addManaHero(player[1].getHero().getMana() + manaToIncrement);
+
+                // take first card from deck
+                if (player[0].getDeck().size() > 0) {
+                    player[0].getHand().cards.add(new Card(player[0].getDeck().get(0)));
+                    player[0].getDeck().remove(0);
+                }
+                if (player[1].getDeck().size() > 0) {
+                    player[1].getHand().cards.add(new Card(player[1].getDeck().get(0)));
+                    player[1].getDeck().remove(0);
+                }
+            }
+        } else if(command.equals("getCardsInHand")) {
+            utilities.commands.getCardsInHand getCardsInHandInstance = new utilities.commands.getCardsInHand();
+            if(action.getPlayerIdx() == 1) {
+                getCardsInHandInstance.getCardsInHand(action, actionNode, player[0], objectMapper, output);
+            } else {
+                getCardsInHandInstance.getCardsInHand(action, actionNode, player[1], objectMapper, output);
+            }
+        } else if(command.equals("placeCard")) {
+            int handIdx = action.getHandIdx();
+            int playerIdx = action.getPlayerIdx();
+            utilities.commands.placeCard placeCardInstance = new utilities.commands.placeCard();
+            placeCardInstance.placeCard(player, playerIdx, handIdx, Table.getTable());
         }
     }
 }
