@@ -1,9 +1,102 @@
 [ {
-  "command" : "getPlayerDeck",
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ {
+    "health" : 3,
+    "attackDamage" : 0,
+    "mana" : 3,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "name" : "The Cursed One",
+    "colors" : [ "Black", "White", "Red" ]
+  }, {
+    "health" : 4,
+    "attackDamage" : 0,
+    "mana" : 2,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "health" : 2,
+    "attackDamage" : 1,
+    "mana" : 1,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  }, {
+    "health" : 2,
+    "attackDamage" : 2,
+    "mana" : 2,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  } ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
     "health" : 3,
     "attackDamage" : 4,
+    "mana" : 4,
+    "description" : "Premium card: Insanity is always an option, now it is an absolute.",
+    "name" : "Miraj",
+    "colors" : [ "Yellow", "Orange", "Red" ]
+  }, {
+    "health" : 5,
+    "attackDamage" : 2,
+    "mana" : 2,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "name" : "Warden",
+    "colors" : [ "Black", "White", "Green" ]
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "health" : 2,
+    "attackDamage" : 0,
+    "mana" : 2,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "name" : "Disciple",
+    "colors" : [ "Yellow", "White" ]
+  } ]
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 3,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 2,
+  "playerIdx" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 2,
+  "output" : [ {
+    "health" : 3,
+    "attackDamage" : 1,
+    "mana" : 2,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  } ]
+}, {
+  "command" : "getCardsInHand",
+  "playerIdx" : 1,
+  "output" : [ {
+    "health" : 4,
+    "attackDamage" : 5,
     "mana" : 4,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
     "name" : "Miraj",
@@ -14,30 +107,8 @@
   "playerIdx" : 2,
   "output" : [ {
     "health" : 3,
-    "attackDamage" : 4,
-    "mana" : 4,
-    "description" : "Premium card: Insanity is always an option, now it is an absolute.",
-    "name" : "Miraj",
-    "colors" : [ "Yellow", "Orange", "Red" ]
-  } ]
-}, {
-  "command" : "getPlayerDeck",
-  "playerIdx" : 2,
-  "output" : [ {
-    "health" : 3,
-    "attackDamage" : 4,
-    "mana" : 4,
-    "description" : "Premium card: Insanity is always an option, now it is an absolute.",
-    "name" : "Miraj",
-    "colors" : [ "Yellow", "Orange", "Red" ]
-  } ]
-}, {
-  "command" : "getPlayerDeck",
-  "playerIdx" : 2,
-  "output" : [ {
-    "health" : 3,
-    "attackDamage" : 4,
-    "mana" : 4,
+    "attackDamage" : 5,
+    "mana" : 5,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
     "name" : "Miraj",
     "colors" : [ "Yellow", "Orange", "Red" ]
@@ -46,44 +117,11 @@
   "command" : "getPlayerDeck",
   "playerIdx" : 1,
   "output" : [ {
-    "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 3,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  } ]
-}, {
-  "command" : "getPlayerDeck",
-  "playerIdx" : 1,
-  "output" : [ {
-    "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 3,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  } ]
-}, {
-  "command" : "getPlayerDeck",
-  "playerIdx" : 1,
-  "output" : [ {
-    "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 3,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  } ]
-}, {
-  "command" : "getPlayerDeck",
-  "playerIdx" : 1,
-  "output" : [ {
-    "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 3,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
+    "health" : 2,
+    "attackDamage" : 0,
+    "mana" : 2,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "name" : "Disciple",
+    "colors" : [ "Yellow", "White" ]
   } ]
 } ]

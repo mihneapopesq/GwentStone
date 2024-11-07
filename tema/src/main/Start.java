@@ -15,7 +15,7 @@ import utilities.*;
 
 public final class Start {
 
-    private int current_round = 0;
+    private int current_round = 1;
     private Player[] players = new Player[2];
     private Table Table = new Table();
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -76,6 +76,15 @@ public final class Start {
         players[0].getHero().setHealth(30);
         players[1].getHero().setHealth(30);
 
+        players[0].getHand().getCards().add(new Card(players[0].getDeck().get(0)));
+        players[0].getDeck().remove(0);
+        players[1].getHand().getCards().add(new Card(players[1].getDeck().get(0)));
+        players[1].getDeck().remove(0);
+
+        players[0].setMana(1);
+        players[1].setMana(1);
+
+
         this.playerTurn = startGame.getStartingPlayer();
     }
     public void run() {
@@ -113,17 +122,19 @@ public final class Start {
             playerTurn = (playerTurn == 1) ? 2 : 1;
             if(playerTurn == startingPlayer) {
                 current_round++;
-                manaToIncrement++;
-                player[0].addManaHero(player[0].getHero().getMana() + manaToIncrement);
-                player[1].addManaHero(player[1].getHero().getMana() + manaToIncrement);
 
+                manaToIncrement++;
+                if(manaToIncrement > 10)
+                    manaToIncrement = 10;
+                player[0].setMana(player[0].getMana() + manaToIncrement);
+                player[1].setMana(player[1].getMana() + manaToIncrement);
                 // take first card from deck
                 if (player[0].getDeck().size() > 0) {
-                    player[0].getHand().cards.add(new Card(player[0].getDeck().get(0)));
+                    player[0].getHand().getCards().add(new Card(player[0].getDeck().get(0)));
                     player[0].getDeck().remove(0);
                 }
                 if (player[1].getDeck().size() > 0) {
-                    player[1].getHand().cards.add(new Card(player[1].getDeck().get(0)));
+                    player[1].getHand().getCards().add(new Card(player[1].getDeck().get(0)));
                     player[1].getDeck().remove(0);
                 }
             }
@@ -136,9 +147,18 @@ public final class Start {
             }
         } else if(command.equals("placeCard")) {
             int handIdx = action.getHandIdx();
-            int playerIdx = action.getPlayerIdx();
             utilities.commands.placeCard placeCardInstance = new utilities.commands.placeCard();
-            placeCardInstance.placeCard(player, playerIdx, handIdx, Table.getTable());
+            placeCardInstance.placeCard(player, playerTurn, handIdx, Table);
+        } else if(command.equals("getPlayerMana")) {
+            utilities.commands.getPlayerMana getPlayerManaInstance = new utilities.commands.getPlayerMana();
+            if(action.getPlayerIdx() == 1) {
+                getPlayerManaInstance.getPlayerMana(action, actionNode, player[0], output);
+            } else {
+                getPlayerManaInstance.getPlayerMana(action, actionNode, player[1], output);
+            }
+        } else if(command.equals("getCardsOnTable")) {
+            utilities.commands.getCardsOnTable getCardsOnTableInstance = new utilities.commands.getCardsOnTable();
+            getCardsOnTableInstance.getCardsOnTable(action, actionNode, Table, objectMapper, output);
         }
     }
 }

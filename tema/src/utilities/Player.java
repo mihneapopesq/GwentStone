@@ -9,10 +9,24 @@ public class Player {
 
     CardInput hero;
     Hand hand;
+    int mana;
     private ArrayList<CardInput> deck;
 
     public void addManaHero(int mana){
         hero.setMana(hero.getMana() + mana);
+    }
+
+//    public void removeManaHero(int mana){
+//        hero.setMana(hero.getMana() - mana);
+//    }
+
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
     }
 
     public Hand getHand() {

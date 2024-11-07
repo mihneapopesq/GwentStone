@@ -16,11 +16,8 @@ public class getPlayerDeck {
         ArrayNode arrayNode = objectMapper.createArrayNode();
 
         for (CardInput card : cards) {
-            if (!card.getName().equals("Berserker") && !card.getName().equals("Sentinel")) {
-                // Create a Card instance to use its cardNode method
                 Card cardHelper = new Card(card);
                 arrayNode.add(cardHelper.cardNode(card, "card", objectMapper));
-            }
         }
         actionNode.set("output", arrayNode);
         output.add(actionNode);

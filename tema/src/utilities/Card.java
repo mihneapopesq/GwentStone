@@ -38,7 +38,4 @@ public class Card {
         }
         return colorsNode;
     }
-
-
-
 }
