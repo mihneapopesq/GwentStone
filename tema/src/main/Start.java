@@ -148,7 +148,7 @@ public final class Start {
         } else if(command.equals("placeCard")) {
             int handIdx = action.getHandIdx();
             utilities.commands.placeCard placeCardInstance = new utilities.commands.placeCard();
-            placeCardInstance.placeCard(player, playerTurn, handIdx, Table);
+            placeCardInstance.placeCard(player, playerTurn, handIdx, Table, actionNode, objectMapper, output);
         } else if(command.equals("getPlayerMana")) {
             utilities.commands.getPlayerMana getPlayerManaInstance = new utilities.commands.getPlayerMana();
             if(action.getPlayerIdx() == 1) {

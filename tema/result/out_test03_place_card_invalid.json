@@ -38,6 +38,10 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "command" : "placeCard",
+  "error" : "Not enough mana to place card on table.",
+  "handIdx" : 1
+}, {
   "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
@@ -83,6 +87,14 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "placeCard",
+  "error" : "Not enough mana to place card on table.",
+  "handIdx" : 0
+}, {
+  "command" : "placeCard",
+  "error" : "Not enough mana to place card on table.",
+  "handIdx" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 9,

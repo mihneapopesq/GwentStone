@@ -1,5 +1,8 @@
 package utilities.commands;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import utilities.Player;
 import utilities.Card;
 import utilities.Table;
@@ -9,7 +12,7 @@ import java.util.ArrayList;
 public class placeCard {
 
     //logica la mana e bubuita + fa si getCards on Table
-    public void placeCard(Player[] players, int playerTurn, int handIdx, Table table) {
+    public void placeCard(Player[] players, int playerTurn, int handIdx, Table table, ObjectNode actionNode, ObjectMapper objectMapper, ArrayNode output) {
         Player currentPlayer = players[playerTurn - 1];
         if(handIdx >= currentPlayer.getHand().getCards().size())
             return ;
@@ -24,14 +27,20 @@ public class placeCard {
                 || cardToPlace.getCard().getName().equals("The Ripper")) {
             targetRow = playerTurn == 1 ? 2 : 1;
         }
-        System.out.printf("Target row: %d\n", targetRow);
-        if (table.getTable().get(targetRow).size() < 5 && currentPlayer.getMana() >= cardToPlace.getCard().getMana()) {
-            table.getTable().get(targetRow).add(cardToPlace);
-            System.out.printf("mana: %d - %d = %d\n", players[playerTurn - 1].getMana(), cardToPlace.getCard().getMana(), players[playerTurn - 1].getMana() - cardToPlace.getCard().getMana());
-            currentPlayer.setMana(currentPlayer.getMana() - cardToPlace.getCard().getMana());
-            currentPlayer.getHand().getCards().remove(handIdx);
-        } else {
-            System.out.println("No space in the target row to place the card.");
+        if(currentPlayer.getMana() < cardToPlace.getCard().getMana()){
+            ObjectNode errorNode = objectMapper.createObjectNode();
+            errorNode.put("command", "placeCard");
+            errorNode.put("error", "Not enough mana to place card on table.");
+            errorNode.put("handIdx", handIdx);
+            output.add(errorNode);
+        }
+
+        if (table.getTable().get(targetRow).size() < 5) {
+            if(currentPlayer.getMana() >= cardToPlace.getCard().getMana()) {
+                table.getTable().get(targetRow).add(cardToPlace);
+                currentPlayer.setMana(currentPlayer.getMana() - cardToPlace.getCard().getMana());
+                currentPlayer.getHand().getCards().remove(handIdx);
+            }
         }
     }
 }

@@ -169,6 +169,10 @@
   "playerIdx" : 2,
   "output" : [ ]
 }, {
+  "command" : "placeCard",
+  "error" : "Not enough mana to place card on table.",
+  "handIdx" : 0
+}, {
   "command" : "getPlayerMana",
   "output" : 1,
   "playerIdx" : 1
