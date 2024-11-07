@@ -9,6 +9,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Card {
 
     private CardInput card;
+    private int alreadyAttacked;
+
+    public int getAlreadyAttacked() {
+        return alreadyAttacked;
+    }
+
+    public void setAlreadyAttacked(int alreadyAttacked) {
+        this.alreadyAttacked = alreadyAttacked;
+    }
 
     public CardInput getCard() {
         return card;

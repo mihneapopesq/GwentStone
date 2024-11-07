@@ -3,6 +3,18 @@
   "output" : 0,
   "playerIdx" : 2
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 4,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "Goliath",
+    "colors" : [ "Brown", "Black", "Grey" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
@@ -21,12 +33,48 @@
   "output" : 1,
   "playerIdx" : 1
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 3,
   "playerIdx" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 15,
@@ -34,6 +82,30 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 21,
@@ -43,8 +115,32 @@
   "output" : 17,
   "playerIdx" : 1
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 2,
+  "y" : 0
 }, {
   "output" : [ [ {
     "health" : 2,
@@ -75,41 +171,13 @@
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   } ], [ {
-    "health" : 8,
-    "attackDamage" : 4,
-    "mana" : 1,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "name" : "Goliath",
-    "colors" : [ "Brown", "Black", "Grey" ]
-  }, {
-    "health" : 4,
-    "attackDamage" : 6,
-    "mana" : 1,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Black", "Yellow" ]
-  }, {
     "health" : 3,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
-  }, {
-    "health" : 7,
-    "attackDamage" : 4,
-    "mana" : 1,
-    "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
   } ], [ {
-    "health" : 5,
-    "attackDamage" : 7,
-    "mana" : 2,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "name" : "Warden",
-    "colors" : [ "Black", "White", "Green" ]
-  }, {
     "health" : 4,
     "attackDamage" : 5,
     "mana" : 2,
@@ -183,11 +251,35 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
@@ -196,16 +288,98 @@
   "output" : 16,
   "playerIdx" : 1
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerMana",
-  "output" : 26,
+  "output" : 25,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerMana",
-  "output" : 38,
+  "output" : 35,
   "playerIdx" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "output" : 35,
+  "playerIdx" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -213,96 +387,210 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 3
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 2
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 8,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 6,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
   "command" : "getPlayerMana",
-  "output" : 36,
+  "output" : 75,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "output" : 85,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 85,
+  "playerIdx" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 8,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 6,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "output" : 95,
+  "playerIdx" : 1
+}, {
+  "command" : "getPlayerMana",
+  "output" : 105,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 8,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 6,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "output" : 105,
+  "playerIdx" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "output" : 115,
+  "playerIdx" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 8,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 6,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 125,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "output" : 125,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
-  "command" : "getPlayerTurn",
-  "output" : 1
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 78,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getPlayerMana",
-  "output" : 88,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 86,
-  "playerIdx" : 1
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 8,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 1,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
-  "command" : "getPlayerMana",
-  "output" : 96,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerMana",
-  "output" : 108,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 106,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerMana",
-  "output" : 118,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 128,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getPlayerMana",
-  "output" : 126,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "output" : [ [ {
-    "health" : 2,
-    "attackDamage" : 6,
-    "mana" : 1,
-    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "name" : "Sentinel",
-    "colors" : [ "Black", "White" ]
-  }, {
     "health" : 3,
     "attackDamage" : 0,
     "mana" : 1,
@@ -330,64 +618,22 @@
     "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
     "name" : "Sentinel",
     "colors" : [ "Black", "White" ]
+  }, {
+    "health" : 2,
+    "attackDamage" : 0,
+    "mana" : 1,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
   } ], [ {
-    "health" : 8,
-    "attackDamage" : 4,
-    "mana" : 1,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "name" : "Goliath",
-    "colors" : [ "Brown", "Black", "Grey" ]
-  }, {
-    "health" : 4,
-    "attackDamage" : 6,
-    "mana" : 1,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Black", "Yellow" ]
-  }, {
     "health" : 3,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
-  }, {
-    "health" : 7,
-    "attackDamage" : 4,
-    "mana" : 1,
-    "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  }, {
-    "health" : 8,
-    "attackDamage" : 4,
-    "mana" : 1,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "name" : "Goliath",
-    "colors" : [ "Brown", "Black", "Grey" ]
   } ], [ {
-    "health" : 5,
-    "attackDamage" : 7,
-    "mana" : 2,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "name" : "Warden",
-    "colors" : [ "Black", "White", "Green" ]
-  }, {
-    "health" : 4,
-    "attackDamage" : 5,
-    "mana" : 2,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  }, {
-    "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 2,
-    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
-    "name" : "Miraj",
-    "colors" : [ "Yellow", "Orange", "Red" ]
-  }, {
-    "health" : 6,
+    "health" : 1,
     "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
@@ -400,6 +646,13 @@
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
     "name" : "Warden",
     "colors" : [ "Black", "White", "Green" ]
+  }, {
+    "health" : 4,
+    "attackDamage" : 6,
+    "mana" : 1,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   } ], [ {
     "health" : 2,
     "attackDamage" : 5,
@@ -442,41 +695,27 @@
   "playerIdx" : 2,
   "output" : [ {
     "health" : 3,
-    "attackDamage" : 6,
-    "mana" : 2,
-    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
-    "name" : "Miraj",
-    "colors" : [ "Yellow", "Orange", "Red" ]
-  }, {
-    "health" : 2,
-    "attackDamage" : 0,
-    "mana" : 1,
-    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "name" : "Disciple",
-    "colors" : [ "Green", "Yellow", "Blue" ]
-  }, {
-    "health" : 3,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   }, {
-    "health" : 4,
+    "health" : -1,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
     "name" : "The Ripper",
     "colors" : [ "Black", "Yellow" ]
   }, {
-    "health" : 8,
+    "health" : -5,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : 7,
+    "health" : -6,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
@@ -490,21 +729,21 @@
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   }, {
-    "health" : 3,
+    "health" : -4,
     "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
     "name" : "Miraj",
     "colors" : [ "Yellow", "Orange", "Red" ]
   }, {
-    "health" : 8,
+    "health" : -2,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : 2,
+    "health" : -3,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
@@ -515,13 +754,6 @@
   "command" : "getCardsInHand",
   "playerIdx" : 1,
   "output" : [ {
-    "health" : 4,
-    "attackDamage" : 6,
-    "mana" : 1,
-    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  }, {
     "health" : 4,
     "attackDamage" : 0,
     "mana" : 1,

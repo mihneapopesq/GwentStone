@@ -1,4 +1,28 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 7,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 5,
+    "mana" : 1,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
+    "health" : 3,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {

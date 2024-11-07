@@ -1,4 +1,28 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 1,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {

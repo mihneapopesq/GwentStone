@@ -137,6 +137,13 @@ public final class Start {
                     player[1].getHand().getCards().add(new Card(player[1].getDeck().get(0)));
                     player[1].getDeck().remove(0);
                 }
+
+                for(int i = 0; i < 4; i++) {
+                    for(Card card : Table.getTable().get(i)) {
+                        card.setAlreadyAttacked(0);
+                    }
+                }
+
             }
         } else if(command.equals("getCardsInHand")) {
             utilities.commands.getCardsInHand getCardsInHandInstance = new utilities.commands.getCardsInHand();
@@ -159,6 +166,12 @@ public final class Start {
         } else if(command.equals("getCardsOnTable")) {
             utilities.commands.getCardsOnTable getCardsOnTableInstance = new utilities.commands.getCardsOnTable();
             getCardsOnTableInstance.getCardsOnTable(action, actionNode, Table, objectMapper, output);
+        } else if(command.equals("cardUsesAttack")) {
+            utilities.commands.cardUsesAttack cardUsesAttackInstance = new utilities.commands.cardUsesAttack();
+            cardUsesAttackInstance.cardUsesAttack(action,playerTurn - 1, Table, objectMapper, output);
+        } else if(command.equals("getCardAtPosition")) {
+            utilities.commands.getCardAtPosition getCardAtPositionInstance = new utilities.commands.getCardAtPosition();
+            getCardAtPositionInstance.getCardAtPosition(action, actionNode, Table, objectMapper, output);
         }
     }
 }

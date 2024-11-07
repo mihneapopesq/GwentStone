@@ -1,4 +1,16 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
   "command" : "getPlayerHero",
   "playerIdx" : 1,
   "output" : {
@@ -36,6 +48,18 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 4,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 8,
+    "mana" : 1,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 1,
+  "y" : 0
 }, {
   "command" : "getPlayerHero",
   "playerIdx" : 1,

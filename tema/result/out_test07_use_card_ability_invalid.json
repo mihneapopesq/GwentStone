@@ -1,4 +1,16 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "health" : 3,
+    "mana" : 4,
+    "name" : "Miraj",
+    "colors" : [ "Yellow", "Orange", "Red" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
   "command" : "getCardsInHand",
   "playerIdx" : 1,
   "output" : [ {

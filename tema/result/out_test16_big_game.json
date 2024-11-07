@@ -13,12 +13,60 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 2,
+    "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
+    "health" : 2,
+    "mana" : 2,
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 1,
+    "mana" : 3,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 1,
+    "mana" : 3,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 2,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 0,
   "playerIdx" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 2,
+    "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
+    "health" : 2,
+    "mana" : 2,
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -29,6 +77,18 @@
   "command" : "getPlayerMana",
   "output" : 3,
   "playerIdx" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 2,
+    "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
+    "health" : 2,
+    "mana" : 2,
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 7,
@@ -41,20 +101,6 @@
     "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
     "name" : "Berserker",
     "colors" : [ "Red", "Blue", "Pink" ]
-  }, {
-    "health" : 2,
-    "attackDamage" : 2,
-    "mana" : 1,
-    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
-    "name" : "Sentinel",
-    "colors" : [ "Black", "Grey", "Blue" ]
-  }, {
-    "health" : 4,
-    "attackDamage" : 0,
-    "mana" : 2,
-    "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
-    "name" : "Disciple",
-    "colors" : [ "Green", "Yellow", "Blue" ]
   } ], [ {
     "health" : 4,
     "attackDamage" : 5,
@@ -63,14 +109,14 @@
     "name" : "The Ripper",
     "colors" : [ "Black", "Yellow" ]
   } ], [ {
-    "health" : 3,
+    "health" : 1,
     "attackDamage" : 6,
     "mana" : 3,
     "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 6,
+    "health" : 2,
     "attackDamage" : 2,
     "mana" : 3,
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",

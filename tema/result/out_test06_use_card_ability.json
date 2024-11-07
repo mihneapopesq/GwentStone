@@ -24,6 +24,18 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 2,
+    "mana" : 3,
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
   "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
@@ -48,6 +60,18 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 2,
+    "mana" : 3,
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
+  },
+  "x" : 0,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 7,

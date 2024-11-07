@@ -1,4 +1,54 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : "No card available at that position.",
+  "x" : 0,
+  "y" : 3
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
+    "health" : 1,
+    "mana" : 3,
+    "name" : "Warden",
+    "colors" : [ "Brown", "Blue" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacker card has already attacked this turn."
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card does not belong to the enemy."
+}, {
   "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
@@ -23,6 +73,18 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 2,
+    "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
+    "health" : 2,
+    "mana" : 3,
+    "name" : "Goliath",
+    "colors" : [ "Brown", "Black", "Grey" ]
+  },
+  "x" : 1,
+  "y" : 0
 }, {
   "command" : "getPlayerMana",
   "output" : 10,
@@ -54,7 +116,7 @@
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   } ], [ {
-    "health" : 8,
+    "health" : 2,
     "attackDamage" : 2,
     "mana" : 3,
     "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
@@ -68,7 +130,7 @@
     "name" : "Miraj",
     "colors" : [ "Yellow", "Orange", "Red" ]
   } ], [ {
-    "health" : 5,
+    "health" : 1,
     "attackDamage" : 3,
     "mana" : 3,
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",

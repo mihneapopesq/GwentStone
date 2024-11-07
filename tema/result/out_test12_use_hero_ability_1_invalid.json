@@ -1,6 +1,54 @@
 [ {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 3,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "mana" : 1,
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: Fear him. Your last breath is now.",
+    "health" : 1,
+    "mana" : 1,
+    "name" : "Berserker",
+    "colors" : [ "Red", "Blue", "Pink" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 6,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 3,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
