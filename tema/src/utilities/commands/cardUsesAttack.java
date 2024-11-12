@@ -37,6 +37,18 @@ public class cardUsesAttack {
             return;
         }
 
+        if(Table.getTable().get(attackerX).get(attackerY).getIsFrozen() == 1) {
+            ObjectNode errorNode = objectMapper.createObjectNode();
+            ObjectNode cardAttackerNode = objectMapper.createObjectNode();
+            errorNode.put("command", "cardUsesAttack");
+            cardAttackerNode.put("x", attackerX);
+            cardAttackerNode.put("y", attackerY);
+            errorNode.set("cardAttacker", cardAttackerNode);
+            errorNode.put("error", "Attacker card is frozen.");
+            output.add(errorNode);
+            return;
+        }
+
         if(thereIsTank(playerTurn, Table) == 1 && cardIsTank(Table.getTable().get(targetX).get(targetY)) == 0) {
             makeErrorNodes(objectMapper, attackerX, attackerY, targetX, targetY, "Attacked card is not of type 'Tank'.", output);
             return;

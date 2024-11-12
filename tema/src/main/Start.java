@@ -119,6 +119,19 @@ public final class Start {
             utilities.commands.getPlayerTurn getPlayerTurnInstance = new utilities.commands.getPlayerTurn(playerTurn);
             getPlayerTurnInstance.getPlayerTurn(action, actionNode, output);
         } else if (command.equals("endPlayerTurn")) {
+
+            if (playerTurn == 1) {
+                for (int j = 2; j < 4; j++) {
+                    for (Card card : Table.getTable().get(j))
+                        card.setIsFrozen(0);
+                }
+            } else {
+                for (int j = 0; j < 2; j++) {
+                    for(Card card : Table.getTable().get(j))
+                        card.setIsFrozen(0);
+                }
+            }
+
             playerTurn = (playerTurn == 1) ? 2 : 1;
             if(playerTurn == startingPlayer) {
                 current_round++;
@@ -141,6 +154,8 @@ public final class Start {
                         card.setAlreadyAttacked(0);
                     }
                 }
+                player[0].setHeroAlreadyAttacked(0);
+                player[1].setHeroAlreadyAttacked(0);
             }
         } else if(command.equals("getCardsInHand")) {
             utilities.commands.getCardsInHand getCardsInHandInstance = new utilities.commands.getCardsInHand();
@@ -175,6 +190,12 @@ public final class Start {
         } else if(command.equals("useAttackHero")) {
             utilities.commands.useAttackHero useAttackHeroInstance = new utilities.commands.useAttackHero();
             useAttackHeroInstance.useAttackHero(action, playerTurn - 1, Table, objectMapper, output, player);
+        } else if(command.equals("useHeroAbility")) {
+            utilities.commands.useHeroAbility useHeroAbilityInstance = new utilities.commands.useHeroAbility();
+            useHeroAbilityInstance.useHeroAbility(action, playerTurn - 1, Table, objectMapper, output, player);
+        } else if(command.equals("getFrozenCardsOnTable")) {
+            utilities.commands.getFrozenCardsOnTable getFrozenCardsOnTableInstance = new utilities.commands.getFrozenCardsOnTable();
+            getFrozenCardsOnTableInstance.getFrozenCardsOnTable(Table, objectMapper, output, actionNode);
         }
     }
 }

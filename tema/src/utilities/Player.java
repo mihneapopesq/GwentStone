@@ -7,19 +7,11 @@ import java.util.ArrayList;
 
 public class Player {
 
-    CardInput hero;
+    Hero hero;
     Hand hand;
+    private int heroAlreadyAttacked;
     int mana;
     private ArrayList<CardInput> deck;
-
-    public void addManaHero(int mana){
-        hero.setMana(hero.getMana() + mana);
-    }
-
-//    public void removeManaHero(int mana){
-//        hero.setMana(hero.getMana() - mana);
-//    }
-
 
     public int getMana() {
         return mana;
@@ -50,11 +42,19 @@ public class Player {
     }
 
     public void setHero(CardInput hero){
-        this.hero = hero;
+        this.hero = new Hero(hero);
+
     }
 
     public CardInput getHero(){
-        return hero;
+        return hero.getCard();
     }
 
+    public int getHeroAlreadyAttacked() {
+        return heroAlreadyAttacked;
+    }
+
+    public void setHeroAlreadyAttacked(int heroAlreadyAttacked) {
+        this.heroAlreadyAttacked = heroAlreadyAttacked;
+    }
 }

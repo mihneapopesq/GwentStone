@@ -3,6 +3,12 @@
   "output" : 0,
   "playerIdx" : 2
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 4,
@@ -37,13 +43,20 @@
   "output" : {
     "attackDamage" : 6,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "health" : 2,
+    "health" : 3,
     "mana" : 1,
     "name" : "Sentinel",
     "colors" : [ "Black", "White" ]
   },
   "x" : 0,
   "y" : 0
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 2,
+  "error" : "Selected row does not belong to the current player."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -59,6 +72,9 @@
   },
   "x" : 3,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerMana",
   "output" : 3,
@@ -68,7 +84,7 @@
   "output" : {
     "attackDamage" : 6,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "health" : 2,
+    "health" : 3,
     "mana" : 1,
     "name" : "Sentinel",
     "colors" : [ "Black", "White" ]
@@ -77,11 +93,14 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 15,
+  "output" : 12,
   "playerIdx" : 2
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -99,7 +118,7 @@
   "output" : {
     "attackDamage" : 6,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "health" : 2,
+    "health" : 3,
     "mana" : 1,
     "name" : "Sentinel",
     "colors" : [ "Black", "White" ]
@@ -107,12 +126,36 @@
   "x" : 0,
   "y" : 0
 }, {
+  "output" : [ {
+    "health" : 3,
+    "attackDamage" : 6,
+    "mana" : 1,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "name" : "Sentinel",
+    "colors" : [ "Black", "White" ]
+  }, {
+    "health" : 3,
+    "attackDamage" : 0,
+    "mana" : 1,
+    "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
+    "name" : "The Cursed One",
+    "colors" : [ "Pink", "Purple" ]
+  } ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "error" : "Attacker card is frozen."
+}, {
   "command" : "getPlayerMana",
-  "output" : 21,
+  "output" : 18,
   "playerIdx" : 2
 }, {
   "command" : "getPlayerMana",
-  "output" : 17,
+  "output" : 15,
   "playerIdx" : 1
 }, {
   "command" : "useAttackHero",
@@ -126,13 +169,20 @@
   "output" : {
     "attackDamage" : 6,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "health" : 2,
+    "health" : 3,
     "mana" : 1,
     "name" : "Sentinel",
     "colors" : [ "Black", "White" ]
   },
   "x" : 0,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 2,
+  "error" : "Selected row does not belong to the current player."
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -152,7 +202,7 @@
   "gameEnded" : "Player one killed the enemy hero."
 }, {
   "output" : [ [ {
-    "health" : 2,
+    "health" : 3,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
@@ -368,11 +418,14 @@
   "output" : 16,
   "playerIdx" : 1
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 4,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -412,11 +465,14 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 4,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -425,7 +481,7 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 35,
+  "output" : 31,
   "playerIdx" : 2
 }, {
   "command" : "cardUsesAbility",
@@ -454,6 +510,9 @@
   "x" : 3,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
@@ -465,7 +524,7 @@
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 5,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -500,13 +559,16 @@
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 5,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   },
   "x" : 0,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -576,11 +638,15 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 3,
+  "error" : "Selected row does not belong to the enemy."
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
   "command" : "getPlayerMana",
-  "output" : 75,
+  "output" : 67,
   "playerIdx" : 2
 }, {
   "command" : "cardUsesAbility",
@@ -612,7 +678,7 @@
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 6,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -621,7 +687,7 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 85,
+  "output" : 77,
   "playerIdx" : 2
 }, {
   "command" : "cardUsesAbility",
@@ -638,6 +704,9 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
   "output" : 85,
   "playerIdx" : 1
@@ -649,7 +718,7 @@
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 6,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -670,7 +739,7 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 95,
+  "output" : 92,
   "playerIdx" : 1
 }, {
   "command" : "cardUsesAbility",
@@ -684,8 +753,11 @@
   },
   "error" : "Attacked card does not belong to the enemy."
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
-  "output" : 105,
+  "output" : 97,
   "playerIdx" : 2
 }, {
   "command" : "getPlayerTurn",
@@ -704,14 +776,17 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 105,
+  "output" : 102,
   "playerIdx" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 6,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -720,7 +795,7 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 115,
+  "output" : 103,
   "playerIdx" : 2
 }, {
   "command" : "useAttackHero",
@@ -757,14 +832,17 @@
   "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
-  "output" : 125,
+  "output" : 113,
   "playerIdx" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 125,
+  "output" : 119,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerTurn",
@@ -781,13 +859,16 @@
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 6,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   },
   "x" : 0,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "cardUsesAbility",
   "cardAttacker" : {
@@ -832,11 +913,15 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 1,
+  "error" : "Hero has already attacked this turn."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
-    "health" : 3,
+    "health" : 7,
     "mana" : 1,
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
@@ -852,47 +937,33 @@
   "error" : "Attacked card is not of type 'Tank'."
 }, {
   "output" : [ [ {
-    "health" : 3,
+    "health" : 7,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   }, {
-    "health" : 2,
-    "attackDamage" : 5,
-    "mana" : 1,
-    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
-    "name" : "Sentinel",
-    "colors" : [ "Black", "White" ]
-  }, {
-    "health" : 2,
+    "health" : 9,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 2,
-    "attackDamage" : 5,
-    "mana" : 1,
-    "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
-    "name" : "Sentinel",
-    "colors" : [ "Black", "White" ]
-  }, {
-    "health" : 2,
+    "health" : 9,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   } ], [ {
-    "health" : 3,
+    "health" : 1,
     "attackDamage" : 6,
-    "mana" : 1,
-    "description" : "Premium card: Insanity is always an option, now it is an absolute.",
+    "mana" : 2,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
     "name" : "Miraj",
-    "colors" : [ "Red", "Black" ]
+    "colors" : [ "Yellow", "Orange", "Red" ]
   } ], [ {
     "health" : 4,
     "attackDamage" : 5,
@@ -969,7 +1040,7 @@
   "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
-    "health" : 3,
+    "health" : 7,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Thrown from the highest cliff, revenge will be his glory.",
@@ -983,7 +1054,7 @@
     "name" : "The Ripper",
     "colors" : [ "Black", "Yellow" ]
   }, {
-    "health" : -2,
+    "health" : -1,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
@@ -997,14 +1068,14 @@
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
   }, {
-    "health" : 3,
+    "health" : 7,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   }, {
-    "health" : -3,
+    "health" : 1,
     "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
@@ -1018,7 +1089,7 @@
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : -3,
+    "health" : -2,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",

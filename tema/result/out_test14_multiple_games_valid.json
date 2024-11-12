@@ -2,9 +2,18 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
   "output" : 1,
   "playerIdx" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -18,11 +27,14 @@
   "x" : 2,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 2,
+  "output" : 0,
   "playerIdx" : 2
 }, {
   "command" : "getPlayerMana",
@@ -36,7 +48,7 @@
   "output" : 2
 }, {
   "command" : "getPlayerMana",
-  "output" : 5,
+  "output" : 1,
   "playerIdx" : 2
 }, {
   "command" : "getCardAtPosition",
@@ -50,6 +62,9 @@
   },
   "x" : 2,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
@@ -70,6 +85,9 @@
   "x" : 0,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
@@ -77,7 +95,57 @@
   "output" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 14,
+  "output" : 8,
+  "playerIdx" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 3,
+  "error" : "Hero has already attacked this turn."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 0,
+    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
+    "health" : 6,
+    "mana" : 1,
+    "name" : "Disciple",
+    "colors" : [ "Green", "Yellow", "Blue" ]
+  },
+  "x" : 0,
+  "y" : 0
+}, {
+  "command" : "getPlayerMana",
+  "output" : 15,
   "playerIdx" : 2
 }, {
   "command" : "getCardAtPosition",
@@ -92,58 +160,21 @@
   "x" : 2,
   "y" : 0
 }, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 4,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 0,
-    "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
-    "mana" : 1,
-    "name" : "Disciple",
-    "colors" : [ "Green", "Yellow", "Blue" ]
-  },
-  "x" : 0,
-  "y" : 0
-}, {
-  "command" : "getPlayerMana",
-  "output" : 27,
-  "playerIdx" : 2
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 2,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 23,
+  "output" : 17,
   "playerIdx" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 6,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
@@ -151,15 +182,21 @@
   "x" : 0,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
-  "output" : 30,
+  "output" : 21,
   "playerIdx" : 1
 }, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 6,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
@@ -171,28 +208,43 @@
   "output" : 2
 }, {
   "command" : "getPlayerMana",
-  "output" : 40,
+  "output" : 31,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 53,
+  "output" : 39,
   "playerIdx" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
   "command" : "getPlayerMana",
-  "output" : 73,
+  "output" : 57,
   "playerIdx" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 0,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 8,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
@@ -200,8 +252,11 @@
   "x" : 0,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
-  "output" : 83,
+  "output" : 67,
   "playerIdx" : 2
 }, {
   "command" : "cardUsesAbility",
@@ -214,6 +269,9 @@
     "y" : 0
   },
   "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "useAttackHero",
   "cardAttacker" : {
@@ -237,71 +295,64 @@
   "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
-  "output" : 80,
+  "output" : 65,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 83,
+  "output" : 67,
   "playerIdx" : 2
 }, {
   "output" : [ [ {
-    "health" : 4,
+    "health" : 8,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 1,
+    "health" : 5,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",
     "colors" : [ "Purple", "Yellow" ]
   }, {
-    "health" : 2,
+    "health" : 6,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",
     "colors" : [ "Red", "Blue", "Pink" ]
   }, {
-    "health" : 4,
+    "health" : 7,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 1,
+    "health" : 3,
     "attackDamage" : 0,
     "mana" : 1,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   } ], [ {
-    "health" : 6,
+    "health" : 10,
     "attackDamage" : 5,
     "mana" : 2,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 3,
-    "mana" : 1,
-    "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  }, {
-    "health" : 4,
+    "health" : 5,
     "attackDamage" : 5,
     "mana" : 1,
     "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 4,
+    "health" : 2,
     "attackDamage" : 8,
     "mana" : 2,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
@@ -309,56 +360,56 @@
     "colors" : [ "Brown", "Black", "Grey" ]
   } ], [ {
     "health" : 7,
-    "attackDamage" : 2,
+    "attackDamage" : 5,
     "mana" : 2,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
   }, {
-    "health" : 5,
-    "attackDamage" : 4,
+    "health" : 7,
+    "attackDamage" : 5,
     "mana" : 1,
     "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
     "name" : "Warden",
     "colors" : [ "Brown", "Blue" ]
   }, {
     "health" : 3,
-    "attackDamage" : 6,
+    "attackDamage" : 7,
     "mana" : 1,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   } ], [ {
     "health" : 3,
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   }, {
     "health" : 1,
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   }, {
     "health" : 1,
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   }, {
     "health" : 4,
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Yellow", "White" ]
   }, {
     "health" : 2,
-    "attackDamage" : 6,
+    "attackDamage" : 8,
     "mana" : 2,
     "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
     "name" : "Sentinel",
@@ -392,7 +443,7 @@
   "output" : {
     "attackDamage" : 5,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 6,
+    "health" : 10,
     "mana" : 2,
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
@@ -402,6 +453,9 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "useAttackHero",
   "cardAttacker" : {
@@ -412,324 +466,374 @@
 }, {
   "command" : "getCardAtPosition",
   "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 7,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 10,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getPlayerMana",
+  "output" : 9,
+  "playerIdx" : 2
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 10,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 10,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 8,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 12,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 8,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getPlayerMana",
+  "output" : 46,
+  "playerIdx" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerMana",
+  "output" : 53,
+  "playerIdx" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 56,
+  "playerIdx" : 2
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacked card does not belong to the enemy."
+}, {
+  "command" : "getPlayerMana",
+  "output" : 63,
+  "playerIdx" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "health" : 12,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  },
+  "x" : 1,
+  "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "getPlayerMana",
+  "output" : 63,
+  "playerIdx" : 2
+}, {
+  "command" : "getPlayerMana",
+  "output" : 67,
+  "playerIdx" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 3
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 3,
+    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
+    "health" : 11,
+    "mana" : 2,
+    "name" : "Goliath",
+    "colors" : [ "Red", "Purple" ]
+  },
+  "x" : 2,
+  "y" : 0
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
     "attackDamage" : 2,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 6,
-    "mana" : 2,
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  },
-  "x" : 1,
-  "y" : 0
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 1,
-    "y" : 1
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getPlayerMana",
-  "output" : 10,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 1
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 6,
-    "mana" : 2,
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  },
-  "x" : 1,
-  "y" : 0
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "cardUsesAttack",
-  "cardAttacker" : {
-    "x" : 1,
-    "y" : 0
-  },
-  "cardAttacked" : {
-    "x" : 2,
-    "y" : 2
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 0,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "useAttackHero",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 3
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 2
-  },
-  "cardAttacked" : {
-    "x" : 0,
-    "y" : 0
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 6,
-    "mana" : 2,
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  },
-  "x" : 1,
-  "y" : 0
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 0,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 0
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 1
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 8,
-    "mana" : 2,
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  },
-  "x" : 1,
-  "y" : 0
-}, {
-  "command" : "cardUsesAttack",
-  "cardAttacker" : {
-    "x" : 0,
-    "y" : 0
-  },
-  "cardAttacked" : {
-    "x" : 2,
-    "y" : 3
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 0,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 1
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 1
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getPlayerMana",
-  "output" : 49,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getPlayerMana",
-  "output" : 59,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 59,
-  "playerIdx" : 2
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 0,
-    "y" : 2
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 0
-  },
-  "error" : "Attacked card does not belong to the enemy."
-}, {
-  "command" : "getPlayerMana",
-  "output" : 69,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Standard card: Death incarnate. No better time to die than now.",
-    "health" : 8,
-    "mana" : 2,
-    "name" : "The Ripper",
-    "colors" : [ "Orange", "Red", "Black" ]
-  },
-  "x" : 1,
-  "y" : 0
-}, {
-  "command" : "getPlayerMana",
-  "output" : 69,
-  "playerIdx" : 2
-}, {
-  "command" : "getPlayerMana",
-  "output" : 79,
-  "playerIdx" : 1
-}, {
-  "command" : "getPlayerTurn",
-  "output" : 1
-}, {
-  "command" : "cardUsesAttack",
-  "cardAttacker" : {
-    "x" : 0,
-    "y" : 3
-  },
-  "cardAttacked" : {
-    "x" : 2,
-    "y" : 3
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 0,
-    "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
-    "mana" : 2,
-    "name" : "Goliath",
-    "colors" : [ "Red", "Purple" ]
-  },
-  "x" : 2,
-  "y" : 0
-}, {
-  "command" : "cardUsesAbility",
-  "cardAttacker" : {
-    "x" : 3,
-    "y" : 2
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 1
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "cardUsesAttack",
-  "cardAttacker" : {
-    "x" : 2,
-    "y" : 2
-  },
-  "cardAttacked" : {
-    "x" : 1,
-    "y" : 1
-  },
-  "error" : "Attacked card is not of type 'Tank'."
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 0,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 8,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
@@ -750,9 +854,9 @@
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 0,
+    "attackDamage" : 3,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
-    "health" : 7,
+    "health" : 11,
     "mana" : 2,
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
@@ -764,7 +868,7 @@
   "output" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 99,
+  "output" : 87,
   "playerIdx" : 1
 }, {
   "command" : "cardUsesAttack",
@@ -778,11 +882,14 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 8,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
@@ -791,8 +898,11 @@
   "y" : 0
 }, {
   "command" : "getPlayerMana",
-  "output" : 99,
+  "output" : 90,
   "playerIdx" : 2
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -811,21 +921,27 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
-  "output" : 109,
+  "output" : 94,
   "playerIdx" : 1
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 0,
+    "attackDamage" : 2,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
-    "health" : 4,
+    "health" : 8,
     "mana" : 1,
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   },
   "x" : 0,
   "y" : 0
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "cardUsesAbility",
   "cardAttacker" : {
@@ -871,142 +987,142 @@
   "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
-  "output" : 119,
+  "output" : 101,
   "playerIdx" : 1
 }, {
   "command" : "getPlayerMana",
-  "output" : 119,
+  "output" : 110,
   "playerIdx" : 2
 }, {
   "output" : [ [ {
-    "health" : 4,
-    "attackDamage" : 0,
+    "health" : 8,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 6,
+    "health" : 5,
+    "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",
     "colors" : [ "Purple", "Yellow" ]
   }, {
-    "health" : 2,
-    "attackDamage" : 6,
+    "health" : 6,
+    "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",
     "colors" : [ "Red", "Blue", "Pink" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 0,
+    "health" : 7,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 0,
+    "health" : 3,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   } ], [ {
-    "health" : 10,
-    "attackDamage" : 5,
+    "health" : 14,
+    "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 5,
+    "health" : 5,
+    "attackDamage" : 7,
     "mana" : 1,
     "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 8,
+    "health" : 2,
+    "attackDamage" : 9,
     "mana" : 2,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 5,
+    "health" : 5,
+    "attackDamage" : 7,
     "mana" : 1,
     "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : -3,
-    "attackDamage" : 8,
+    "health" : -2,
+    "attackDamage" : 9,
     "mana" : 1,
     "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
     "name" : "Warden",
     "colors" : [ "Black", "White", "Green" ]
   } ], [ {
-    "health" : 7,
-    "attackDamage" : 0,
+    "health" : 12,
+    "attackDamage" : 3,
     "mana" : 2,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
   }, {
-    "health" : 5,
-    "attackDamage" : 4,
+    "health" : 12,
+    "attackDamage" : 5,
     "mana" : 1,
     "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
     "name" : "Warden",
     "colors" : [ "Brown", "Blue" ]
   }, {
-    "health" : 3,
-    "attackDamage" : 6,
+    "health" : 8,
+    "attackDamage" : 7,
     "mana" : 1,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 4,
+    "health" : 9,
     "attackDamage" : 5,
     "mana" : 2,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   } ], [ {
-    "health" : 3,
-    "attackDamage" : 0,
+    "health" : 4,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 0,
+    "health" : 2,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 0,
+    "health" : 2,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 0,
+    "health" : 5,
+    "attackDamage" : 2,
     "mana" : 2,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Yellow", "White" ]
   }, {
-    "health" : 2,
-    "attackDamage" : 6,
+    "health" : 3,
+    "attackDamage" : 8,
     "mana" : 2,
     "description" : "Standard card: Trained by the best, nothing will catch him off-guard.",
     "name" : "Sentinel",
@@ -1091,57 +1207,57 @@
   "command" : "getCardsInHand",
   "playerIdx" : 2,
   "output" : [ {
-    "health" : 4,
-    "attackDamage" : 0,
+    "health" : 8,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 8,
+    "health" : 2,
+    "attackDamage" : 9,
     "mana" : 2,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 6,
+    "health" : 5,
+    "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",
     "colors" : [ "Purple", "Yellow" ]
   }, {
-    "health" : 4,
-    "attackDamage" : 0,
+    "health" : 7,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: The will of Gods has been spoken, obey and you shall be saved...or not.",
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   }, {
-    "health" : -5,
-    "attackDamage" : 3,
+    "health" : -1,
+    "attackDamage" : 4,
     "mana" : 1,
     "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
   }, {
-    "health" : 1,
-    "attackDamage" : 0,
+    "health" : 3,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: Nobody suspects an outcast, not even the Gods.",
     "name" : "The Cursed One",
     "colors" : [ "Black", "White", "Red" ]
   }, {
-    "health" : 10,
-    "attackDamage" : 5,
+    "health" : 14,
+    "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: Death incarnate. No better time to die than now.",
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 2,
-    "attackDamage" : 6,
+    "health" : 6,
+    "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: Fear him. Your last breath is now.",
     "name" : "Berserker",

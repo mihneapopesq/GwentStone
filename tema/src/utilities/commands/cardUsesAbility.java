@@ -16,14 +16,17 @@ public class cardUsesAbility {
         int targetX = action.getCardAttacked().getX();
         int targetY = action.getCardAttacked().getY();
 
-//        if (targetY >= Table.getTable().get(targetX).size()) {
-//            return;
-//        }
-//        if (attackerY >= Table.getTable().get(attackerX).size()) {
-//            return;
-//        }
-
-        // todo verify if frozen
+        if(Table.getTable().get(attackerX).get(attackerY).getIsFrozen() == 1) {
+            ObjectNode errorNode = objectMapper.createObjectNode();
+            ObjectNode cardAttackerNode = objectMapper.createObjectNode();
+            errorNode.put("command", "cardUsesAttack");
+            cardAttackerNode.put("x", attackerX);
+            cardAttackerNode.put("y", attackerY);
+            errorNode.set("cardAttacker", cardAttackerNode);
+            errorNode.put("error", "Attacker card is frozen.");
+            output.add(errorNode);
+            return;
+        }
 
 
         if(Table.getTable().get(attackerX).get(attackerY).getAlreadyAttacked() == 1) {
@@ -52,10 +55,6 @@ public class cardUsesAbility {
             makeErrorNodes(objectMapper, attackerX, attackerY, targetX, targetY, "Attacked card is not of type 'Tank'.", output);
             return;
         }
-
-
-
-
 
 
 

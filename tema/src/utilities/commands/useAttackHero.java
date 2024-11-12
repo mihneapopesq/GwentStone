@@ -19,6 +19,19 @@ public class useAttackHero {
             return;
         }
 
+        if(Table.getTable().get(attackerX).get(attackerY).getIsFrozen() == 1) {
+            ObjectNode errorNode = objectMapper.createObjectNode();
+            ObjectNode cardAttackerNode = objectMapper.createObjectNode();
+            errorNode.put("command", "cardUsesAttack");
+            cardAttackerNode.put("x", attackerX);
+            cardAttackerNode.put("y", attackerY);
+            errorNode.set("cardAttacker", cardAttackerNode);
+            errorNode.put("error", "Attacker card is frozen.");
+            output.add(errorNode);
+            return;
+        }
+
+
         if(Table.getTable().get(attackerX).get(attackerY).getAlreadyAttacked() == 1) {
             makeErrorNodes(objectMapper, attackerX, attackerY, "Attacker card has already attacked this turn.", output);
             return;
@@ -46,6 +59,7 @@ public class useAttackHero {
                 output.add(gameEndedNode);
             }
         }
+        player[playerTurn].setHeroAlreadyAttacked(1);
     }
 
     private int thereIsTank(int playerTurn, Table table) {

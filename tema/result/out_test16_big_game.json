@@ -2,10 +2,19 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
   "output" : 1,
   "playerIdx" : 2
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
   "output" : 0,
   "playerIdx" : 1
@@ -39,6 +48,10 @@
   },
   "x" : 2,
   "y" : 0
+}, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 0,
+  "error" : "Not enough mana to use hero's ability."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -87,16 +100,23 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
+}, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
 }, {
   "command" : "getPlayerMana",
   "output" : 3,
   "playerIdx" : 1
 }, {
+  "command" : "useHeroAbility",
+  "affectedRow" : 0,
+  "error" : "Selected row does not belong to the current player."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 2,
     "description" : "Standard card: A drink can always be served, with the blood of his enemies.",
-    "health" : 2,
+    "health" : 3,
     "mana" : 2,
     "name" : "Berserker",
     "colors" : [ "Red", "Blue", "Pink" ]
@@ -104,8 +124,11 @@
   "x" : 0,
   "y" : 0
 }, {
+  "output" : [ ],
+  "command" : "getFrozenCardsOnTable"
+}, {
   "command" : "getPlayerMana",
-  "output" : 7,
+  "output" : 5,
   "playerIdx" : 2
 }, {
   "command" : "useAttackHero",
@@ -118,7 +141,7 @@
   "gameEnded" : "Player one killed the enemy hero."
 }, {
   "output" : [ [ {
-    "health" : 2,
+    "health" : 3,
     "attackDamage" : 2,
     "mana" : 2,
     "description" : "Standard card: A drink can always be served, with the blood of his enemies.",

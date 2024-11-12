@@ -1,6 +1,9 @@
 package utilities;
 
 import fileio.CardInput;
+import utilities.minions.Minion;
+
+import java.util.ArrayList;
 
 public class Hero extends Card{
 
@@ -18,4 +21,10 @@ public class Hero extends Card{
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public void heroAbility(ArrayList<Card> row) {
+
+    }
+
+
 }
