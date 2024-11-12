@@ -24,10 +24,10 @@ public class cardUsesAttack {
             return ;
 
 
-        if(playerTurn == 0 &&(targetX == 2 || targetX == 3) && !Table.getTable().get(attackerX).get(attackerY).getCard().getName().equals("Disciple")) {
+        if(playerTurn == 0 &&(targetX == 2 || targetX == 3)) {
             makeErrorNodes(objectMapper, attackerX, attackerY, targetX, targetY, "Attacked card does not belong to the enemy.", output);
             return ;
-        } else if(playerTurn == 1 && (targetX == 0 || targetX == 1) && !Table.getTable().get(attackerX).get(attackerY).getCard().getName().equals("Disciple")) {
+        } else if(playerTurn == 1 && (targetX == 0 || targetX == 1)) {
             makeErrorNodes(objectMapper, attackerX, attackerY, targetX, targetY, "Attacked card does not belong to the enemy.", output);
             return ;
         }

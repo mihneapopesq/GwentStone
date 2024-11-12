@@ -85,7 +85,7 @@
   "output" : 1
 }, {
   "output" : [ [ {
-    "health" : 2,
+    "health" : 8,
     "attackDamage" : 0,
     "mana" : 3,
     "description" : "Standard card: Everything is sacred to him, all is but a gift from the saints.",
@@ -106,14 +106,14 @@
     "name" : "The Cursed One",
     "colors" : [ "Pink", "Purple" ]
   } ], [ {
-    "health" : 7,
-    "attackDamage" : 1,
+    "health" : 5,
+    "attackDamage" : 0,
     "mana" : 3,
     "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
     "name" : "Goliath",
     "colors" : [ "Red", "Purple" ]
   }, {
-    "health" : 3,
+    "health" : 6,
     "attackDamage" : 4,
     "mana" : 5,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
@@ -141,15 +141,15 @@
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   }, {
-    "health" : 4,
+    "health" : 11,
     "attackDamage" : 5,
     "mana" : 5,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
     "name" : "Miraj",
     "colors" : [ "Yellow", "Orange", "Red" ]
   } ], [ {
-    "health" : 3,
-    "attackDamage" : 2,
+    "health" : 2,
+    "attackDamage" : 3,
     "mana" : 1,
     "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
     "name" : "Sentinel",

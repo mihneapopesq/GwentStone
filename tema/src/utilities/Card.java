@@ -10,6 +10,15 @@ public class Card {
 
     private CardInput card;
     private int alreadyAttacked;
+    private int isFrozen;
+
+    public int getIsFrozen() {
+        return isFrozen;
+    }
+
+    public void setIsFrozen(int isFrozen) {
+        this.isFrozen = isFrozen;
+    }
 
     public int getAlreadyAttacked() {
         return alreadyAttacked;
@@ -25,6 +34,11 @@ public class Card {
 
     public Card(CardInput card) {
         this.card = card;
+    }
+
+    public Card(Card card) {
+        this.card = card.getCard();
+        this.alreadyAttacked = card.getAlreadyAttacked();
     }
 
     public ObjectNode cardNode(CardInput card, String type, ObjectMapper objectMapper) {

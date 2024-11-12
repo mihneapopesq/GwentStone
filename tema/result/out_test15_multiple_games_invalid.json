@@ -171,7 +171,7 @@
     "name" : "Disciple",
     "colors" : [ "Green", "Yellow", "Blue" ]
   } ], [ {
-    "health" : 3,
+    "health" : 1,
     "attackDamage" : 6,
     "mana" : 1,
     "description" : "Premium card: Insanity is always an option, now it is an absolute.",
@@ -185,7 +185,7 @@
     "name" : "The Ripper",
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
-    "health" : 3,
+    "health" : 2,
     "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
@@ -300,6 +300,17 @@
   "x" : 0,
   "y" : 0
 }, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerMana",
   "output" : 25,
   "playerIdx" : 1
@@ -322,6 +333,17 @@
   "command" : "getPlayerMana",
   "output" : 35,
   "playerIdx" : 2
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card does not belong to the enemy."
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -356,6 +378,17 @@
   },
   "x" : 0,
   "y" : 0
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -398,6 +431,17 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "error" : "Attacked card does not belong to the enemy."
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
@@ -412,6 +456,17 @@
   },
   "x" : 2,
   "y" : 0
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card does not belong to the enemy."
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
@@ -479,6 +534,17 @@
   "command" : "getPlayerMana",
   "output" : 95,
   "playerIdx" : 1
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card does not belong to the enemy."
 }, {
   "command" : "getPlayerMana",
   "output" : 105,
@@ -559,6 +625,17 @@
   },
   "x" : 0,
   "y" : 0
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -715,7 +792,7 @@
     "name" : "Goliath",
     "colors" : [ "Brown", "Black", "Grey" ]
   }, {
-    "health" : -6,
+    "health" : -5,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Standard card: A warrior who is never afraid of battle, no matter the costs",
@@ -737,7 +814,7 @@
     "colors" : [ "Yellow", "Orange", "Red" ]
   }, {
     "health" : -2,
-    "attackDamage" : 4,
+    "attackDamage" : 2,
     "mana" : 1,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
     "name" : "Goliath",

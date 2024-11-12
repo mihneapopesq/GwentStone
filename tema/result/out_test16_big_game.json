@@ -117,7 +117,7 @@
     "colors" : [ "Orange", "Red", "Black" ]
   }, {
     "health" : 2,
-    "attackDamage" : 2,
+    "attackDamage" : 0,
     "mana" : 3,
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
     "name" : "Warden",
