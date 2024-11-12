@@ -16,25 +16,15 @@ public class cardUsesAbility {
         int targetX = action.getCardAttacked().getX();
         int targetY = action.getCardAttacked().getY();
 
-
-        System.out.printf("---------------FOR EACH STEP---------------\n");
-        System.out.printf("target x = %d, target y = %d\n", targetX, targetY);
-        System.out.printf("attacker x = %d, attacker y = %d\n", attackerX, attackerY);
-        System.out.printf("=-------------------------------------------=\n");
-
-
-
-        if (targetY >= Table.getTable().get(targetX).size()) {
-            return;
-        }
-        if (attackerY >= Table.getTable().get(attackerX).size()) {
-            return;
-        }
+//        if (targetY >= Table.getTable().get(targetX).size()) {
+//            return;
+//        }
+//        if (attackerY >= Table.getTable().get(attackerX).size()) {
+//            return;
+//        }
 
         // todo verify if frozen
 
-
-        System.out.printf("attacker(x = %d, y = %d), attacked (x = %d, y = %d) %s (yes : %d) \n",attackerX, attackerY,targetX,targetY ,Table.getTable().get(attackerX).get(attackerY).getCard().getName(), Table.getTable().get(attackerX).get(attackerY).getAlreadyAttacked());
 
         if(Table.getTable().get(attackerX).get(attackerY).getAlreadyAttacked() == 1) {
             makeErrorNodes(objectMapper, attackerX, attackerY, targetX, targetY, "Attacker card has already attacked this turn.", output);

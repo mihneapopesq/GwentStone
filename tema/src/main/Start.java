@@ -173,7 +173,8 @@ public final class Start {
             utilities.commands.cardUsesAbility cardUsesAbilityInstance = new utilities.commands.cardUsesAbility();
             cardUsesAbilityInstance.cardUsesAbility(action, playerTurn - 1, Table, objectMapper, output);
         } else if(command.equals("useAttackHero")) {
-
+            utilities.commands.useAttackHero useAttackHeroInstance = new utilities.commands.useAttackHero();
+            useAttackHeroInstance.useAttackHero(action, playerTurn - 1, Table, objectMapper, output, player);
         }
     }
 }

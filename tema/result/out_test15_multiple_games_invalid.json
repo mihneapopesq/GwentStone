@@ -115,6 +115,13 @@
   "output" : 17,
   "playerIdx" : 1
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 6,
@@ -141,6 +148,8 @@
   },
   "x" : 2,
   "y" : 0
+}, {
+  "gameEnded" : "Player one killed the enemy hero."
 }, {
   "output" : [ [ {
     "health" : 2,
@@ -237,6 +246,13 @@
   "playerIdx" : 2,
   "output" : [ ]
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "placeCard",
   "error" : "Not enough mana to place card on table.",
   "handIdx" : 0
@@ -248,8 +264,76 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "getCardAtPosition",
+  "output" : {
+    "attackDamage" : 5,
+    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
+    "health" : 2,
+    "mana" : 1,
+    "name" : "Sentinel",
+    "colors" : [ "Black", "Grey", "Blue" ]
+  },
+  "x" : 3,
+  "y" : 0
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 1
+}, {
+  "command" : "getPlayerTurn",
+  "output" : 2
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -266,23 +350,19 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
-  "command" : "getPlayerTurn",
-  "output" : 2
-}, {
-  "command" : "getCardAtPosition",
-  "output" : {
-    "attackDamage" : 5,
-    "description" : "Premium card: His presence is not known even by ghosts, success at all costs.",
-    "health" : 2,
-    "mana" : 1,
-    "name" : "Sentinel",
-    "colors" : [ "Black", "Grey", "Blue" ]
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
   },
-  "x" : 3,
-  "y" : 0
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
-  "command" : "getPlayerTurn",
-  "output" : 1
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
   "output" : 16,
@@ -306,6 +386,20 @@
     "y" : 0
   },
   "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
     "x" : 2,
     "y" : 0
   },
@@ -431,6 +525,17 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "cardUsesAbility",
   "cardAttacker" : {
     "x" : 0,
@@ -447,12 +552,12 @@
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 8,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "health" : 6,
-    "mana" : 1,
-    "name" : "Warden",
-    "colors" : [ "Brown", "Blue" ]
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   },
   "x" : 2,
   "y" : 0
@@ -478,6 +583,28 @@
   "output" : 75,
   "playerIdx" : 2
 }, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 2
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
@@ -496,6 +623,17 @@
   "command" : "getPlayerMana",
   "output" : 85,
   "playerIdx" : 2
+}, {
+  "command" : "cardUsesAbility",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
@@ -521,12 +659,12 @@
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 8,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "health" : 6,
-    "mana" : 1,
-    "name" : "Warden",
-    "colors" : [ "Brown", "Blue" ]
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   },
   "x" : 2,
   "y" : 0
@@ -555,12 +693,12 @@
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 8,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "health" : 6,
-    "mana" : 1,
-    "name" : "Warden",
-    "colors" : [ "Brown", "Blue" ]
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   },
   "x" : 2,
   "y" : 0
@@ -585,20 +723,38 @@
   "output" : 115,
   "playerIdx" : 2
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 8,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "health" : 6,
-    "mana" : 1,
-    "name" : "Warden",
-    "colors" : [ "Brown", "Blue" ]
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   },
   "x" : 2,
   "y" : 0
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
   "output" : 125,
@@ -613,6 +769,13 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -637,17 +800,31 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
   "command" : "getCardAtPosition",
   "output" : {
-    "attackDamage" : 8,
-    "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
-    "health" : 1,
-    "mana" : 1,
-    "name" : "Warden",
-    "colors" : [ "Brown", "Blue" ]
+    "attackDamage" : 5,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "health" : 4,
+    "mana" : 2,
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   },
   "x" : 2,
   "y" : 0
@@ -666,6 +843,13 @@
   },
   "x" : 0,
   "y" : 0
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "output" : [ [ {
     "health" : 3,
@@ -710,7 +894,21 @@
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   } ], [ {
-    "health" : 1,
+    "health" : 4,
+    "attackDamage" : 5,
+    "mana" : 2,
+    "description" : "Premium card: Ravished by the winds of hell, no soul is to be forgiven.",
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
+  }, {
+    "health" : 2,
+    "attackDamage" : 6,
+    "mana" : 2,
+    "description" : "Standard card: When he is near, close your eyes. They betray your mind.",
+    "name" : "Miraj",
+    "colors" : [ "Yellow", "Orange", "Red" ]
+  }, {
+    "health" : 6,
     "attackDamage" : 8,
     "mana" : 1,
     "description" : "Premium card: You shall not pass, you shall not prevail, you shall perish.",
@@ -785,7 +983,7 @@
     "name" : "The Ripper",
     "colors" : [ "Black", "Yellow" ]
   }, {
-    "health" : -5,
+    "health" : -2,
     "attackDamage" : 4,
     "mana" : 1,
     "description" : "Premium card: No matter how many, his body will fight. Save your breath for the Mountain is strong.",
@@ -806,7 +1004,7 @@
     "name" : "Miraj",
     "colors" : [ "Red", "Black" ]
   }, {
-    "health" : -4,
+    "health" : -3,
     "attackDamage" : 6,
     "mana" : 2,
     "description" : "Standard card: When he is near, close your eyes. They betray your mind.",

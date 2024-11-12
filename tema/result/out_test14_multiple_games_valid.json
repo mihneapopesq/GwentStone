@@ -215,6 +215,27 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerMana",
   "output" : 80,
   "playerIdx" : 1
@@ -382,6 +403,13 @@
   "command" : "getPlayerTurn",
   "output" : 2
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "error" : "Attacker card has already attacked this turn."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 2,
@@ -397,6 +425,13 @@
   "command" : "getPlayerTurn",
   "output" : 1
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 5,
@@ -408,6 +443,13 @@
   },
   "x" : 1,
   "y" : 0
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getPlayerMana",
   "output" : 10,
@@ -427,6 +469,13 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getCardAtPosition",
   "output" : {
     "attackDamage" : 5,
@@ -441,6 +490,38 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 2
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 1,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "cardUsesAbility",
   "cardAttacker" : {
@@ -502,6 +583,17 @@
   },
   "x" : 1,
   "y" : 0
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 0
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -587,6 +679,17 @@
 }, {
   "command" : "getPlayerTurn",
   "output" : 1
+}, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 0,
+    "y" : 3
+  },
+  "cardAttacked" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "error" : "Attacked card is not of type 'Tank'."
 }, {
   "command" : "getCardAtPosition",
   "output" : {
@@ -735,6 +838,38 @@
   },
   "error" : "Attacked card is not of type 'Tank'."
 }, {
+  "command" : "cardUsesAttack",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 3
+  },
+  "cardAttacked" : {
+    "x" : 1,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 2
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 2,
+    "y" : 1
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
+  "command" : "useAttackHero",
+  "cardAttacker" : {
+    "x" : 3,
+    "y" : 0
+  },
+  "error" : "Attacked card is not of type 'Tank'."
+}, {
   "command" : "getPlayerMana",
   "output" : 119,
   "playerIdx" : 1
@@ -827,6 +962,13 @@
     "description" : "Standard card: He has seen everything, his mind has never been asleep since the making of the realm.",
     "name" : "Warden",
     "colors" : [ "Brown", "Blue" ]
+  }, {
+    "health" : 3,
+    "attackDamage" : 6,
+    "mana" : 1,
+    "description" : "Standard card: Death incarnate. No better time to die than now.",
+    "name" : "The Ripper",
+    "colors" : [ "Orange", "Red", "Black" ]
   }, {
     "health" : 4,
     "attackDamage" : 5,

@@ -56,7 +56,7 @@ public class cardUsesAttack {
         if(playerTurn == 0)
             row = 1;
         else
-            row = 0;
+            row = 2;
         for(Card card : table.getTable().get(row)) {
             if(cardIsTank(card) == 1)
                 return 1;
