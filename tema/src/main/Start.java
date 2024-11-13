@@ -84,6 +84,9 @@ public final class Start {
         players[0].setMana(1);
         players[1].setMana(1);
 
+        players[0].setWins(0);
+        players[1].setWins(0);
+
 
         this.playerTurn = startGame.getStartingPlayer();
     }
@@ -95,11 +98,11 @@ public final class Start {
             actionsinputs = input.getGames().get(i).getActions();
             for (ActionsInput action : actionsinputs) {
                 ObjectNode actionNode = mapper.createObjectNode();
-                handleAction(action, actionNode, players);
+                handleAction(action, actionNode, players, i);
             }
         }
     }
-    public void handleAction(ActionsInput action, ObjectNode actionNode, Player[] player) {
+    public void handleAction(ActionsInput action, ObjectNode actionNode, Player[] player, int current_game) {
         String command = action.getCommand();
         if (command.equals("getPlayerDeck")) {
             utilities.commands.getPlayerDeck getPlayerDeckInstance = new utilities.commands.getPlayerDeck();
@@ -196,6 +199,15 @@ public final class Start {
         } else if(command.equals("getFrozenCardsOnTable")) {
             utilities.commands.getFrozenCardsOnTable getFrozenCardsOnTableInstance = new utilities.commands.getFrozenCardsOnTable();
             getFrozenCardsOnTableInstance.getFrozenCardsOnTable(Table, objectMapper, output, actionNode);
+        } else if(command.equals("getTotalGamesPlayed")) {
+            utilities.commands.getTotalGamesPlayed getTotalGamesPlayedInstance = new utilities.commands.getTotalGamesPlayed();
+            getTotalGamesPlayedInstance.getTotalGamesPlayed(objectMapper, output, current_game + 1);
+        } else if(command.equals("getPlayerTwoWins")) {
+            utilities.commands.getPlayerTwoWins getPlayerTwoWinsInstance = new utilities.commands.getPlayerTwoWins();
+            getPlayerTwoWinsInstance.getPlayerTwoWins(objectMapper, output, player[1]);
+        } else if(command.equals("getPlayerOneWins")) {
+            utilities.commands.getPlayerOneWins getPlayerOneWinsInstance = new utilities.commands.getPlayerOneWins();
+            getPlayerOneWinsInstance.getPlayerOneWins(objectMapper, output, player[0]);
         }
     }
 }

@@ -296,6 +296,15 @@
   "playerIdx" : 2,
   "output" : [ ]
 }, {
+  "command" : "getTotalGamesPlayed",
+  "output" : 1
+}, {
+  "command" : "getPlayerTwoWins",
+  "output" : 0
+}, {
+  "command" : "getPlayerOneWins",
+  "output" : 1
+}, {
   "command" : "useAttackHero",
   "cardAttacker" : {
     "x" : 0,
@@ -1163,4 +1172,13 @@
     "name" : "The Ripper",
     "colors" : [ "Black", "Yellow" ]
   } ]
+}, {
+  "command" : "getTotalGamesPlayed",
+  "output" : 2
+}, {
+  "command" : "getPlayerTwoWins",
+  "output" : 0
+}, {
+  "command" : "getPlayerOneWins",
+  "output" : 0
 } ]

@@ -12,6 +12,15 @@ public class Player {
     private int heroAlreadyAttacked;
     int mana;
     private ArrayList<CardInput> deck;
+    private int wins;
+
+    public int getWins() {
+        return wins;
+    }
+
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
 
     public int getMana() {
         return mana;

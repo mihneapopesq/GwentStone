@@ -1263,4 +1263,13 @@
     "name" : "Berserker",
     "colors" : [ "Red", "Blue", "Pink" ]
   } ]
+}, {
+  "command" : "getPlayerOneWins",
+  "output" : 0
+}, {
+  "command" : "getPlayerTwoWins",
+  "output" : 0
+}, {
+  "command" : "getTotalGamesPlayed",
+  "output" : 2
 } ]

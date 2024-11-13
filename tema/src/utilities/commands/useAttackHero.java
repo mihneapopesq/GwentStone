@@ -48,6 +48,7 @@ public class useAttackHero {
             if(player[1].getHero().getHealth() <= 0) {
                 ObjectNode gameEndedNode = objectMapper.createObjectNode();
                 gameEndedNode.put("gameEnded", "Player one killed the enemy hero.");
+                player[0].setWins(player[0].getWins() + 1);
                 output.add(gameEndedNode);
             }
         } else {
@@ -56,6 +57,7 @@ public class useAttackHero {
             if (player[0].getHero().getHealth() <= 0) {
                 ObjectNode gameEndedNode = objectMapper.createObjectNode();
                 gameEndedNode.put("gameEnded", "Player two killed the enemy hero.");
+                player[1].setWins(player[1].getWins() + 1);
                 output.add(gameEndedNode);
             }
         }
