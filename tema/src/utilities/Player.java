@@ -13,6 +13,16 @@ public class Player {
     int mana;
     private ArrayList<CardInput> deck;
     private int wins;
+    private int gameEnded;
+
+
+    public int getGameEnded() {
+        return gameEnded;
+    }
+
+    public void setGameEnded(int gameEnded) {
+        this.gameEnded = gameEnded;
+    }
 
     public int getWins() {
         return wins;
@@ -66,4 +76,26 @@ public class Player {
     public void setHeroAlreadyAttacked(int heroAlreadyAttacked) {
         this.heroAlreadyAttacked = heroAlreadyAttacked;
     }
+
+    public Player(ArrayList<CardInput> deck) {
+        this.deck = new ArrayList<>();
+        for (CardInput card : deck) {
+            this.deck.add(copyCard(card));
+        }
+        this.hand = new Hand();
+    }
+
+    private CardInput copyCard(CardInput original) {
+        CardInput copy = new CardInput();
+        copy.setMana(original.getMana());
+        copy.setAttackDamage(original.getAttackDamage());
+        copy.setHealth(original.getHealth());
+        copy.setDescription(original.getDescription());
+        copy.setColors(new ArrayList<>(original.getColors()));
+        copy.setName(original.getName());
+        return copy;
+    }
+
+
+
 }

@@ -22,7 +22,7 @@ public class useAttackHero {
         if(Table.getTable().get(attackerX).get(attackerY).getIsFrozen() == 1) {
             ObjectNode errorNode = objectMapper.createObjectNode();
             ObjectNode cardAttackerNode = objectMapper.createObjectNode();
-            errorNode.put("command", "cardUsesAttack");
+            errorNode.put("command", "useAttackHero");
             cardAttackerNode.put("x", attackerX);
             cardAttackerNode.put("y", attackerY);
             errorNode.set("cardAttacker", cardAttackerNode);
@@ -48,7 +48,8 @@ public class useAttackHero {
             if(player[1].getHero().getHealth() <= 0) {
                 ObjectNode gameEndedNode = objectMapper.createObjectNode();
                 gameEndedNode.put("gameEnded", "Player one killed the enemy hero.");
-                player[0].setWins(player[0].getWins() + 1);
+//                player[0].setWins(player[0].getWins() + 1);
+                player[0].setGameEnded(1);
                 output.add(gameEndedNode);
             }
         } else {
@@ -57,11 +58,11 @@ public class useAttackHero {
             if (player[0].getHero().getHealth() <= 0) {
                 ObjectNode gameEndedNode = objectMapper.createObjectNode();
                 gameEndedNode.put("gameEnded", "Player two killed the enemy hero.");
-                player[1].setWins(player[1].getWins() + 1);
+//                player[1].setWins(player[1].getWins() + 1);
+                player[1].setGameEnded(1);
                 output.add(gameEndedNode);
             }
         }
-        player[playerTurn].setHeroAlreadyAttacked(1);
     }
 
     private int thereIsTank(int playerTurn, Table table) {
@@ -78,16 +79,14 @@ public class useAttackHero {
     }
 
     private int cardIsTank(Card card) {
-        if(card.getCard().getName().equals("Goliath") || card.getCard().getName().equals("Warden")) {
+        if(card.getCard().getName().equals("Goliath") || card.getCard().getName().equals("Warden"))
             return 1;
-        }
         return 0;
     }
 
     public void makeErrorNodes(ObjectMapper objectMapper, int attackerX, int attackerY, String string, ArrayNode output) {
         ObjectNode errorNode = objectMapper.createObjectNode();
         ObjectNode cardAttackerNode = objectMapper.createObjectNode();
-        ObjectNode cardAttackedNode = objectMapper.createObjectNode();
         errorNode.put("command", "useAttackHero");
         cardAttackerNode.put("x", attackerX);
         cardAttackerNode.put("y", attackerY);

@@ -28,6 +28,8 @@ public final class Start {
     private int playerTurn;
     private int startingPlayer;
     private int manaToIncrement = 1;
+    private int player1Wins;
+    private int player2Wins;
 
     //pare ok
     public Start(Input input, ArrayNode output) {
@@ -39,66 +41,79 @@ public final class Start {
         players[1].getHand().setCards(new ArrayList<Card>());
         this.input = input;
         this.output = output;
-        deckPlayer1 = new ArrayList<CardInput>();
-        deckPlayer2 = new ArrayList<CardInput>();
+        players[0].setWins(0);
+        players[1].setWins(0);
+        player1Wins = 0;
+        player2Wins = 0;
     }
-    //pare ok
+
     private void initializeDecks(int i) {
         StartGameInput startGame = input.getGames().get(i).getStartGame();
         int playerOneDeckIdx = startGame.getPlayerOneDeckIdx();
         int playerTwoDeckIdx = startGame.getPlayerTwoDeckIdx();
 
-        // make the first deck
-        for(int j = 0; j < input.getPlayerOneDecks().getNrCardsInDeck(); j++) {
-            CardInput card = input.getPlayerOneDecks().getDecks().get(playerOneDeckIdx).get(j);
-            deckPlayer1.add(card);
-        }
+        ArrayList<CardInput> deck1 = input.getPlayerOneDecks().getDecks().get(playerOneDeckIdx);
+        ArrayList<CardInput> deck2 = input.getPlayerTwoDecks().getDecks().get(playerTwoDeckIdx);
 
-        // make the second deck
-        for(int j = 0; j < input.getPlayerTwoDecks().getNrCardsInDeck(); j++) {
-            CardInput card = input.getPlayerTwoDecks().getDecks().get(playerTwoDeckIdx).get(j);
-            deckPlayer2.add(card);
-        }
+        players[0] = new Player(deck1);
+        players[1] = new Player(deck2);
 
-        // set the decks
         int shuffleSeed = startGame.getShuffleSeed();
-        players[0].setDeck(deckPlayer1);
-        players[1].setDeck(deckPlayer2);
-        // shuffle the decks
         Collections.shuffle(players[0].getDeck(), new Random(shuffleSeed));
         Collections.shuffle(players[1].getDeck(), new Random(shuffleSeed));
 
-        // set the heroes
         players[0].setHero(startGame.getPlayerOneHero());
         players[1].setHero(startGame.getPlayerTwoHero());
 
-        // set heroes health
         players[0].getHero().setHealth(30);
         players[1].getHero().setHealth(30);
 
-        players[0].getHand().getCards().add(new Card(players[0].getDeck().get(0)));
-        players[0].getDeck().remove(0);
-        players[1].getHand().getCards().add(new Card(players[1].getDeck().get(0)));
-        players[1].getDeck().remove(0);
+        players[0].getHand().getCards().add(new Card(players[0].getDeck().remove(0)));
+        players[1].getHand().getCards().add(new Card(players[1].getDeck().remove(0)));
 
         players[0].setMana(1);
         players[1].setMana(1);
 
-        players[0].setWins(0);
-        players[1].setWins(0);
-
-
         this.playerTurn = startGame.getStartingPlayer();
     }
+
+
     public void run() {
         for (int i = 0; i < input.getGames().size(); i++) {
+
+
+            current_round = 1;
+            manaToIncrement = 1;
+
+            clearTable(Table);
+            clearDeck(players[0].getDeck());
+            clearDeck(players[1].getDeck());
+            clearHand(players[0].getHand());
+            clearHand(players[1].getHand());
+
+
+
             initializeDecks(i);
             ObjectMapper mapper = new ObjectMapper();
             startingPlayer = input.getGames().get(i).getStartGame().getStartingPlayer();
             actionsinputs = input.getGames().get(i).getActions();
+
+
+
+
             for (ActionsInput action : actionsinputs) {
                 ObjectNode actionNode = mapper.createObjectNode();
+
                 handleAction(action, actionNode, players, i);
+
+                if(players[0].getGameEnded() == 1) {
+                    players[0].setGameEnded(0);
+                    player1Wins++;
+                }
+                if(players[1].getGameEnded() == 1) {
+                    players[1].setGameEnded(0);
+                    player2Wins++;
+                }
             }
         }
     }
@@ -204,10 +219,29 @@ public final class Start {
             getTotalGamesPlayedInstance.getTotalGamesPlayed(objectMapper, output, current_game + 1);
         } else if(command.equals("getPlayerTwoWins")) {
             utilities.commands.getPlayerTwoWins getPlayerTwoWinsInstance = new utilities.commands.getPlayerTwoWins();
-            getPlayerTwoWinsInstance.getPlayerTwoWins(objectMapper, output, player[1]);
+            getPlayerTwoWinsInstance.getPlayerTwoWins(objectMapper, output, player2Wins);
         } else if(command.equals("getPlayerOneWins")) {
             utilities.commands.getPlayerOneWins getPlayerOneWinsInstance = new utilities.commands.getPlayerOneWins();
-            getPlayerOneWinsInstance.getPlayerOneWins(objectMapper, output, player[0]);
+            getPlayerOneWinsInstance.getPlayerOneWins(objectMapper, output, player1Wins);
         }
     }
+
+    public void clearTable(Table table){
+        for(int i = 0; i < 4; i++){
+            table.getTable().get(i).clear();
+        }
+    }
+
+    public void clearDeck(ArrayList<CardInput> deck){
+        for(int i = 0; i < deck.size(); i++){
+            deck.remove(i);
+        }
+    }
+
+    public void clearHand(Hand hand){
+        for(int i = 0; i < hand.getCards().size(); i++){
+            hand.getCards().remove(i);
+        }
+    }
+
 }
