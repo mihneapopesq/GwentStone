@@ -2,20 +2,35 @@ package utilities;
 
 import java.util.ArrayList;
 
-public class Hand {
+/**
+ * Represents a player's hand, containing a collection of cards
+ */
+public final class Hand {
 
-    public ArrayList<Card> cards;
+    private ArrayList<Card> cards;
 
+    /**
+     * Constructs a new hand with an empty list of cards
+     */
     public Hand() {
         this.cards = new ArrayList<>();
     }
 
-    public void setCards(ArrayList<Card> hand) {
+    /**
+     * Sets the cards in the hand
+     *
+     * @param hand the new list of cards
+     */
+    public void setCards(final ArrayList<Card> hand) {
         this.cards = hand;
     }
 
+    /**
+     * Returns the cards in the hand
+     *
+     * @return the list of cards
+     */
     public ArrayList<Card> getCards() {
         return cards;
     }
-
 }

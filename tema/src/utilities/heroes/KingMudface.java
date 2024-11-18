@@ -6,14 +6,29 @@ import utilities.Card;
 
 import java.util.ArrayList;
 
-public class KingMudface extends Hero{
-    public KingMudface(CardInput card) {
+/**
+ * Represents the hero King Mudface
+ * Heals all cards in a row by 1 health point
+ */
+public final class KingMudface extends Hero {
+
+    /**
+     * Constructs a new King Mudface hero
+     *
+     * @param card the card representing this hero
+     */
+    public KingMudface(final CardInput card) {
         super(card);
     }
 
+    /**
+     * Applies the hero's special ability to heal cards in the given row
+     *
+     * @param row the row of cards to be healed
+     */
     @Override
-    public void heroAbility(ArrayList<Card> row) {
-        for(Card card : row) {
+    public void heroAbility(final ArrayList<Card> row) {
+        for (final Card card : row) {
             card.getCard().setHealth(card.getCard().getHealth() + 1);
         }
     }

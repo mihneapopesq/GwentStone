@@ -2,82 +2,133 @@ package utilities;
 
 import fileio.CardInput;
 
-import javax.smartcardio.Card;
 import java.util.ArrayList;
 
-public class Player {
+/**
+ * Represents a player in the game, containing hero, hand, deck
+ */
+public final class Player {
 
-    Hero hero;
-    Hand hand;
+    private Hero hero;
+    private Hand hand;
     private int heroAlreadyAttacked;
-    int mana;
-    private ArrayList<CardInput> deck;
-    private int wins;
+    private int mana;
+    private final ArrayList<CardInput> deck;
     private int gameEnded;
 
-
+    /**
+     * Retrieves whether the game was ended or not
+     *
+     * @return the game ended status
+     */
     public int getGameEnded() {
         return gameEnded;
     }
 
-    public void setGameEnded(int gameEnded) {
+    /**
+     * Sets whether the game was ended or not
+     *
+     * @param gameEnded the new game ended status
+     */
+    public void setGameEnded(final int gameEnded) {
         this.gameEnded = gameEnded;
     }
 
-    public int getWins() {
-        return wins;
-    }
-
-    public void setWins(int wins) {
-        this.wins = wins;
-    }
-
+    /**
+     * Returns the player's mana
+     *
+     * @return the current mana
+     */
     public int getMana() {
         return mana;
     }
 
-    public void setMana(int mana) {
+    /**
+     * Sets the player's mana
+     *
+     * @param mana the new mana value
+     */
+    public void setMana(final int mana) {
         this.mana = mana;
     }
 
+    /**
+     * Returns the player's hand
+     *
+     * @return the hand
+     */
     public Hand getHand() {
         return hand;
     }
 
-    public void setHand(Hand hand) {
+    /**
+     * Sets the player's hand
+     *
+     * @param hand the new hand
+     */
+    public void setHand(final Hand hand) {
         this.hand = hand;
     }
 
-    public Player(){
+    /**
+     * Default Constructor
+     * Initializes the player's deck
+     */
+    public Player() {
         this.deck = new ArrayList<>();
     }
 
-    public void setDeck(ArrayList<CardInput> deck) {
-        this.deck = deck;
-    }
-
+    /**
+     * Returns the player's deck
+     *
+     * @return the deck
+     */
     public ArrayList<CardInput> getDeck() {
         return deck;
     }
 
-    public void setHero(CardInput hero){
+    /**
+     * Sets the player's hero
+     *
+     * @param hero the new hero
+     */
+    public void setHero(final CardInput hero) {
         this.hero = new Hero(hero);
-
     }
 
-    public CardInput getHero(){
+    /**
+     * Returns the player's hero
+     *
+     * @return the hero card
+     */
+    public CardInput getHero() {
         return hero.getCard();
     }
 
+    /**
+     * Returns the hero attack status
+     *
+     * @return the hero already attacked status
+     */
     public int getHeroAlreadyAttacked() {
         return heroAlreadyAttacked;
     }
 
-    public void setHeroAlreadyAttacked(int heroAlreadyAttacked) {
+    /**
+     * Sets the hero attack status
+     *
+     * @param heroAlreadyAttacked the new status
+     */
+    public void setHeroAlreadyAttacked(final int heroAlreadyAttacked) {
         this.heroAlreadyAttacked = heroAlreadyAttacked;
     }
 
-    public Player(ArrayList<CardInput> deck) {
+    /**
+     * Constructor with a specified deck
+     *
+     * @param deck the initial deck
+     */
+    public Player(final ArrayList<CardInput> deck) {
         this.deck = new ArrayList<>();
         for (CardInput card : deck) {
             this.deck.add(copyCard(card));
@@ -85,7 +136,13 @@ public class Player {
         this.hand = new Hand();
     }
 
-    private CardInput copyCard(CardInput original) {
+    /**
+     * Creates a deep copy of a card
+     *
+     * @param original the card to copy
+     * @return the copied card
+     */
+    private CardInput copyCard(final CardInput original) {
         CardInput copy = new CardInput();
         copy.setMana(original.getMana());
         copy.setAttackDamage(original.getAttackDamage());
@@ -95,7 +152,4 @@ public class Player {
         copy.setName(original.getName());
         return copy;
     }
-
-
-
 }
